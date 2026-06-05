@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You | VidWebix</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #000000, #450ABA);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .glow-text {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: bold;
+      text-shadow: 0 0 15px #8A2BE2, 0 0 25px #8A2BE2;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    .sub-text {
+      font-size: clamp(1rem, 3vw, 1.4rem);
+      color: #ccc;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    .back-btn {
+      padding: 12px 28px;
+      background: #8A2BE2;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: white;
+      color: #450ABA;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        text-shadow: 0 0 15px #8A2BE2, 0 0 25px #8A2BE2;
+      }
+      50% {
+        text-shadow: 0 0 25px #ffffff, 0 0 35px #ffffff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-text">Thank You for Reaching Out! ✨</div>
+  <div class="sub-text">
+    We appreciate your message. Our team will get in touch with you shortly. <br/>Let’s create something amazing together at <strong>VidWebix</strong>!
+  </div>
+  <a class="back-btn" href="index.html">← Back to Home</a>
+</body>
+</html>
+     
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      const aboutContent = document.getElementById("about-content");
+      setTimeout(() => {
+          aboutContent.classList.add("visible");
+      }, 200);
+  });
+  document.addEventListener("DOMContentLoaded", () => {
+          const strategyItems = document.querySelectorAll(".strategy-item");
+          const observer = new IntersectionObserver(entries => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add("visible");
+                  }
+              });
+          }, { threshold: 0.2 });
+          
+          strategyItems.forEach(item => observer.observe(item));
+      });
+      <link rel="canonical" href="https://www.vidwebix.com/"/>
+</script>
